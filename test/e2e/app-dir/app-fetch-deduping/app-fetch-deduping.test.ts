@@ -77,11 +77,9 @@ describe('app-fetch-deduping', () => {
         await next.render('/test')
 
         expect(invocation(next.cliOutput)).toBe(1)
-        await next.stop()
       })
 
       it('should dedupe pending revalidation requests', async () => {
-        await next.start()
         const revalidate = 5
         await next.patchFile(
           'app/test/page.tsx',
