@@ -45,8 +45,9 @@ function parseLogsFromCli(cliOutput: string) {
 
 describe('app-dir - logging', () => {
   const { next, isNextDev } = nextTestSetup({
-    skipDeployment: true,
     files: __dirname,
+    skipDeployment: true,
+    skipTestsIsolation: true,
   })
   function runTests({
     withFetchesLogging,

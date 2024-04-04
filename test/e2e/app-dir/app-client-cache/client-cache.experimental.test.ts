@@ -12,6 +12,7 @@ describe('app dir client cache semantics (experimental staleTimes)', () => {
       env: {
         NEXT_TELEMETRY_DEBUG: '1',
       },
+      skipTestsIsolation: true,
     })
 
     if (isNextDev) {
@@ -193,6 +194,7 @@ describe('app dir client cache semantics (experimental staleTimes)', () => {
 
   describe('static: 180', () => {
     const { next, isNextDev } = nextTestSetup({
+      skipTestsIsolation: true,
       files: __dirname,
       nextConfig: {
         experimental: { staleTimes: { static: 180 } },
