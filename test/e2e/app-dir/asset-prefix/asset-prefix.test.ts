@@ -4,6 +4,7 @@ describe('app-dir assetPrefix handling', () => {
   const { next } = nextTestSetup({
     files: __dirname,
     skipDeployment: true,
+    skipTestsIsolation: true,
   })
 
   it('should redirect route when requesting it directly', async () => {
